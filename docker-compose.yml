@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai_learning_companion_backend
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - SECRET_KEY=super-secret-production-jwt-key-2026
+      - DATABASE_URL=sqlite:///./learning_companion.db
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-""}
+    volumes:
+      - app_data:/app/backend/app/uploads
+      - ./logs:/app/logs
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ai_learning_companion_frontend
+    restart: always
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  app_data:

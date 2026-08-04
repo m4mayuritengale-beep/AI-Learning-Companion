@@ -1,0 +1,28 @@
+# Node
+node_modules/
+frontend/node_modules/
+
+# Python
+venv/
+__pycache__/
+*.py[cod]
+
+# Environment
+.env
+backend/app/.env
+frontend/.env
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+*.log
+backend/logs/
+
+# Uploads
+backend/app/uploads/
+
+# Build
+dist/
+build/

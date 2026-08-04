@@ -1,0 +1,34 @@
+.skeleton-card-pulse, .skeleton-banner-pulse {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  width: 100%;
+}
+
+.skeleton-line {
+  height: 16px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.04) 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  animation: shimmer 1.8s infinite ease-in-out;
+}
+
+.skeleton-line.title {
+  width: 60%;
+  height: 24px;
+}
+
+.skeleton-line.text {
+  width: 90%;
+}
+
+.skeleton-line.short {
+  width: 40%;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

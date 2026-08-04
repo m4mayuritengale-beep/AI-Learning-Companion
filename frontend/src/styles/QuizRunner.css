@@ -1,0 +1,214 @@
+.quiz-generator-bar {
+  padding: 16px 24px;
+  margin-bottom: 24px;
+}
+
+.quiz-topic-form {
+  display: flex;
+  gap: 14px;
+}
+
+.quiz-topic-form input {
+  flex: 1;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  color: var(--text-main);
+  font-size: 15px;
+  outline: none;
+}
+
+.quiz-topic-form input:focus {
+  border-color: var(--accent-purple);
+  box-shadow: var(--glow-primary);
+}
+
+.generate-btn {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--glow-primary);
+}
+
+.active-quiz-card, .quiz-result-card {
+  padding: 32px;
+}
+
+.quiz-meta {
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quiz-meta h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.q-count-tag {
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--accent-purple);
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.question-box-dark {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-glass);
+  padding: 24px;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+}
+
+.question-box-dark h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 18px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.option-chip-dark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.option-chip-dark:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.option-chip-dark.selected {
+  border-color: var(--accent-purple);
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.submit-quiz-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--accent-emerald);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: var(--glow-emerald);
+}
+
+.result-header {
+  text-align: center;
+  padding: 28px;
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+}
+
+.result-header.passed {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: var(--accent-emerald);
+}
+
+.result-header.failed {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+.score-big {
+  font-size: 52px;
+  font-weight: 800;
+  margin: 12px 0;
+}
+
+.review-item {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-glass);
+  padding: 18px;
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+}
+
+.review-item.correct {
+  border-left: 4px solid var(--accent-emerald);
+}
+
+.review-item.wrong {
+  border-left: 4px solid #ef4444;
+}
+
+.review-item h4 {
+  font-size: 15px;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.review-item p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.history-card-dark {
+  padding: 20px;
+}
+
+.history-card-dark h4 {
+  font-size: 15px;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.history-score {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent-purple);
+  margin: 8px 0;
+}
+
+.history-card-dark .date {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.no-history-text {
+  color: var(--text-muted);
+  font-size: 14px;
+}
